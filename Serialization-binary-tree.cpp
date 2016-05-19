@@ -41,9 +41,7 @@ private:
             str += "#,";
             return;
         }
-        char ch[10];
-        sprintf(ch,"%d",root->val);
-        str+=ch;
+        str+=to_string(root->val);
         str+=',';
         Serialize(root->left,str);
         Serialize(root->right,str);
